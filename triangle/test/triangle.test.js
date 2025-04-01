@@ -18,21 +18,21 @@ describe('triangleType function', () => {
     expect(triangleType(7, 10, 12)).toBe('Scalene');
   });
 
-  test('should return "Invalid" when sides cannot form a triangle', () => {
-    expect(triangleType(1, 1, 3)).toBe('Invalid');
-    expect(triangleType(0, 4, 5)).toBe('Invalid');
-    expect(triangleType(-2, 3, 4)).toBe('Invalid');
+  test('should return "Imposible" when sides cannot form a triangle', () => {
+    expect(triangleType(1, 1, 3)).toBe('Imposible');
+    expect(triangleType(0, 4, 5)).toBe('Imposible');
+    expect(triangleType(-2, 3, 4)).toBe('Imposible');
   });
 
-  test('should return "Invalid" when any side is zero or negative', () => {
-    expect(triangleType(0, 4, 5)).toBe('Invalid');
-    expect(triangleType(-1, 2, 2)).toBe('Invalid');
-    expect(triangleType(1, -1, 1)).toBe('Invalid');
+  test('should return "Imposible" when any side is zero or negative', () => {
+    expect(triangleType(0, 4, 5)).toBe('Imposible');
+    expect(triangleType(-1, 2, 2)).toBe('Imposible');
+    expect(triangleType(1, -1, 1)).toBe('Imposible');
   });
 
-  test('should return "Invalid" when triangle inequality is violated', () => {
-    expect(triangleType(1, 2, 4)).toBe('Invalid');
-    expect(triangleType(5, 2, 2)).toBe('Invalid');
-    expect(triangleType(7, 3, 3)).toBe('Invalid');
+  test('should return "Imposible" when triangle inequality is violated', () => {
+    expect(triangleType(1, 2, 4)).toBe('Imposible');
+    expect(triangleType(5, 2, 2)).toBe('Imposible');
+    expect(triangleType(7, 3, 3)).toBe('Imposible');
   });
 });
